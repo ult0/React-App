@@ -1,10 +1,16 @@
+import { Button } from "antd";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { useRouter } from "next/dist/client/router";
+import { AboutPath } from "./paths";
 
 const Home: NextPage = () => {
-  return <div>Home</div>;
+  const router = useRouter();
+
+  return (
+    <div>
+      <Button onClick={() => router.push(AboutPath)}>About</Button>
+    </div>
+  );
 };
 
 export default Home;
